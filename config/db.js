@@ -8,6 +8,9 @@ const dbServer = new Pool({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     port: 5432,
+    ssl: {
+        rejectUnauthorized: false,  // You can keep it false unless you're working in a highly secure environment.
+    },
 });
 
 dbServer.connect((err) => {
