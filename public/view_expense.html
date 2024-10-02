@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Expenses</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <script src="./js/viewExpenses.js" defer></script>
+    <!-- <script>
+        alert('im here');
+        const fetchExpenses = async () =>{
+            try{
+                const response = await fetch('http://localhost:8001/api/view_expense', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify()
+                })
+                if (!response.ok){
+                    throw new Error('fail to fetch expenses');
+                }
+                const expenses = await response.json();
+                displayExpenses(expenses);
+                
+        
+            } catch(error){
+                console.error('error:', error);
+            }
+        };
+        
+        // function to display expenses in the UI
+        const displayExpenses = (expenses) => {
+            console.log('Displaying expenses in the UI...');
+            const expenseTableBody = document.querySelector('.expense-table tbody');
+        
+            if (!expenseTableBody) {
+                console.log('Expense table body not found in the DOM ');
+                return;
+            }
+        
+            expenseTableBody.innerHTML = ''; // Clear any existing rows
+        
+            expenses.forEach(expense => {
+                const row = document.createElement('tr');
+
+                var date = new Date(expense.date)
+
+                // Add tabble cells for each expense property
+                row.innerHTML = `
+                  <td>${expense.category}</td>
+                  <td>${expense.amount}</td>
+                  <td>${date.toDateString()}</td>
+                  <td><a href="#"><button class="edit-btn" onclick="editExpense()">${expense.expense_id}</button</a></td>
+                  <td><button>${expense.expense_id}</button</td>
+                `;
+        
+                // Append the row to the table body
+                expenseTableBody.appendChild(row);
+            });
+            console.log('Expense displayed successfully.')
+        };
+        
+        // Attach event listeners to edit buttons
+        document.querySelectorAll('edit-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const id = button.getAttribute('data-id');
+                editExpense(id);
+            });
+        });
+        
+        // // call the fetchExpenses function when the page loads 
+        // if (window.location.pathname.endsWith('view_expense.html')) {
+        //     document.addEventListener('DOMContentLoaded', fetchExpenses);
+        
+        // }
+
+        fetchExpenses();
+    </script> -->
+
+
+</head>
+<body>
+    <header>
+        <h1>View Expenses</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/add_expense">Add Expense</a>
+            <a href="/edit_expense">Edit Expenses</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Your Expenses</h2>
+            <p><a href="/api/view_expense">View your expenses</a></p>
+            <table class="expense-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <!-- Expense items will go here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Expense Tracker.</p>
+    </footer>
+</body>
+</html>

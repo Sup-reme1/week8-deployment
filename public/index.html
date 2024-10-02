@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/css/styles.css"> -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script src="./js/viewExpenses.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="welcomeMessage">Welcome to Expense Tracker</h1>
+
+        <nav>
+            <!-- <a href="register.html">Register</a>
+            <a href="login.html">Login</a> -->
+            <!-- <a href="/add_expense">Add Expense</a>
+            <a href="view_expense.html">View Expenses</a>
+            <a href="/edit_expense">Edit Expenses</a> -->
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Track your expenses easily</h2>
+            <p>Manage your personal finances with our simple and effective tool.</p>
+        </section>
+
+        <div class="view-expenses">
+            
+            <section>
+                <!-- <h2>View Expenses Section</h2> -->
+                <h2>Your Expenses</h2>
+                <!-- <p><a href="/api/view_expense">View your expenses</a></p> -->
+                <table class="expense-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th colspan="2" align="center">Action</th>
+                            <!-- <th>Delete</th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        
+                        <!-- Expense items will go here -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <div class="add-expenses">
+            <!-- <h2>Add Expenses Section</h2> -->
+            <section> 
+                <h2>Add a New Expense</h2>
+                <form action="/api/add_expense" method="post">
+                    <div>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div>
+                        <label for="category">Category:</label>
+                        <input type="text" id="category" name="category" required>
+                    </div>
+                    <div>
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
+                    <div>
+                        <button type="submit">Add Expense</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+
+
+        <div class="edit-expenses">
+            <section>
+                <h2>Edit Expense</h2>
+                <form action="/api/edit_expense" method="post">
+                    <div>
+                        <label for="expense_id">Expense ID:</label>
+                        <input type="number" id="expense_id" name="expense_id" required readonly>
+                    </div>    
+                    <div>
+                        <label for="category">Category:</label>
+                        <input type="text" id="category" name="category" required>
+                    </div>                
+                    <div>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div>
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" name="amount" required>
+                    </div>
+                    <div>
+                        <button type="submit">Update Expense</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+    </main>
+    <footer>
+        <p>Expense Tracker.</p>
+    </footer>
+</body>
+</html>

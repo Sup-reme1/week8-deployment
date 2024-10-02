@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <nav>
+            <a href="/index">Home</a>
+            <a href="/register">Register</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 id="auth-msg">Login to Your Account</h2>
+            <!-- <p id="auth-msg"></p> -->
+            <p id="msg"></p>
+            <form action="/index" method="POST" id="login-form">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Expense Tracker.</p>
+    </footer>
+    <!-- <script>
+        // document.getElementById('auth-msg').innerHTML = 'Welcome';
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('login-form');
+        
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                //alert('details recieved');
+        
+                
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                const authMsg = document.getElementById('auth-msg');
+        
+        
+                try{
+                    const response = await fetch('/api/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ username, password })
+                    });
+        
+        
+                    if(!response.ok) {
+                        alert('Unsuccessful');
+                        authMsg.textContent = "Invalid email or password!";
+                    } else{
+                        alert('Successful');
+                        authMsg.textContent = "Login successfully";
+                    }
+                    
+                } catch (err) {
+                    authMsg.textContent = 'An error occured'
+                }
+            })
+         })
+    </script> -->
+    <script src="./js/login.js"></script>
+</body>
+</html>

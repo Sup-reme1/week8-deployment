@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 id="auth-msg">Create an Account</h2>
+            <form method="POST" id="registration-form">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Supreme" name="username" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="supreme@gmail.com" name="email" required>
+                </div>
+                <div>
+                    <label for="fullname">Fullname:</label>
+                    <input type="text" id="fullname" placeholder="Abdulbast Ajibowu" name="fullname" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="*******" name="password" required>
+                </div>
+                <div>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+            <p id="auth-msg"></p>
+        </section>
+    </main>
+    <footer>
+        <p>Expense Tracker.</p>
+    </footer>
+
+    <script src="./js/register.js"></script>
+</body>
+</html>
+
+

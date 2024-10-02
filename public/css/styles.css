@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    /* position: fixed; */
+    width: 100%;
+    bottom: 0;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.expense-table{
+    width: 100%;
+}
+
+table, th, td{
+    text-align: left;
+    text-transform: capitalize;
+    /* border: 1px solid gray;
+    border-collapse: collapse; */
+}
+
+th, td{
+    width: 20%;
+}
+button.edit-btn, button.delete-btn{
+    border-radius: 5px;
+    /* border: none; */
+    background-color: f4f4f4;
+    width: 100%;
+}
+
+thead tr th:last-of-type{
+    text-align: center;
+    width: 20%;
+}
+tbody tr th:first-child{
+    width: 30%;
+}
+
+.edit-expenses{
+    display: none;
+}

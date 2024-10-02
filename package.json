@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mysql2": "^3.11.0",
+    "nodemon": "^3.1.4",
+    "pg": "^8.13.0"
+  },
+  "name": "week-6-integration-of-frontend-and-backend-sup-reme1",
+  "version": "1.0.0",
+  "description": "In this week, you will integrate the frontend and backend components of the Expense Tracker Application using Node.js for the backend and HTML, CSS, and JavaScript for the frontend. You will implement user authentication on the backend and create API endpoints to retrieve and display data on the frontend. This will provide hands-on experience with full-stack development, integrating frontend with backend APIs, and managing user sessions securely.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
