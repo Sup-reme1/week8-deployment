@@ -1,6 +1,5 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
-// const mysql = require('mysql2');
+const bcrypt = require('bcryptjs');
 const PORT = 8001;
 const app = express();
 const path = require('path');

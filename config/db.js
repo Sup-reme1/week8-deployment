@@ -18,17 +18,5 @@ dbServer.connect((err) => {
     return console.log('Connected to database successfully: ');
 })
 
-// dbServer.connect()
-//     .then(() => {
-//         console.log('Connected to the database successfully');
-//     })
-//     .catch(err => {
-//         console.error('Error connecting to the database: ', err);
-//     });
-
-// dbServer.on('error', (err) => {
-//     console.error('Unexpected error on idle client', err);
-// });
-
 
 module.exports = dbServer;
